@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Snake Game</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; }
+    canvas { background: #222; display: block; margin: 0 auto; }
+    #controls { margin: 10px; }
+    #ranking { margin-top: 20px; }
+    button { margin: 0 5px; }
+  </style>
+</head>
+<body>
+  <h1>Snake Game</h1>
+  <div id="controls">
+    <button onclick="setSpeed(150)">느림</button>
+    <button onclick="setSpeed(100)">보통</button>
+    <button onclick="setSpeed(50)">빠름</button>
+    <button onclick="restartGame()">재시작</button>
+    <button onclick="togglePause()" id="pauseBtn">멈춤</button>
+    <button onclick="setDifficulty('easy')">Easy</button>
+    <button onclick="setDifficulty('hard')">Hard</button>
+  </div>
+  <canvas id="game" width="400" height="400"></canvas>
+  <div>
+    <h2>점수: <span id="score">0</span></h2>
+  </div>
+  <div id="ranking">
+    <h2>랭킹</h2>
+    <ol id="rankingList"></ol>
+  </div>
+  <script src="snake.js"></script>
+</body>
+</html>
